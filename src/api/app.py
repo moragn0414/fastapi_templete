@@ -1,20 +1,20 @@
 from fastapi import APIRouter
-from src.controllers.get_helloworld import get_helloworld_contorller
-from src.controllers.post_helloworld import post_helloworld_controller, Item
-from src.controllers.delete_helloworld import delete_helloworld_controller
+from src.controllers.get_tdl import get_tdl_contorller
+from src.controllers.post_tdl import post_tdl_controller, Item
+from src.controllers.delete_tdl import delete_tdl_controller
 
-helloworld = APIRouter(tags=["helloworld"])
-
-
-@helloworld.get("/helloworld")
-def get_helloworld():
-    return get_helloworld_contorller()
+tdl = APIRouter(tags=["tdl"])
 
 
-@helloworld.post("/helloworld")
-def post_helloworld(item: Item):
-    return post_helloworld_controller(item)
+@tdl.get("/tdl")
+def get_tdl():
+    return get_tdl_contorller()
 
-@helloworld.delete("/helloworld")
-def delete_helloworld(bye):
-    return delete_helloworld_controller(bye)
+
+@tdl.post("/tdl")
+def post_tdl(item: Item):
+    return post_tdl_controller(item)
+
+@tdl.delete("/tdl")
+def delete_tdl(bye):
+    return delete_tdl_controller(bye)

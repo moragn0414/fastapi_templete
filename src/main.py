@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.api.app import helloworld
+from src.api.app import tdl
 
 app = FastAPI()
 
@@ -9,4 +9,4 @@ def health_check():
     return {"This page is for health check."}
 
 
-app.include_router(helloworld)
+app.include_router(tdl)
