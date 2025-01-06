@@ -2,7 +2,7 @@
 from fastapi import APIRouter
 
 from src.controllers.get_tdl import get_tdl_controller
-from src.controllers.getsingle_tdl import getsingle_tdl_controller
+from src.controllers.get_single_tdl import getsingle_tdl_controller
 from src.controllers.post_tdl import post_tdl_controller, Item
 from src.controllers.delete_tdl import delete_tdl_controller
 
