@@ -16,7 +16,7 @@ def get_tdl_from_json():
     with open("data/tdl.json", "r") as file:
         return json.load(file)
 
-def getsingle_tdl_from_json(the_single):
+def get_single_tdl_from_json(the_single):
     with open("data/tdl.json", "r") as file:
         dict_t=json.load(file)
         return dict_t[the_single]
