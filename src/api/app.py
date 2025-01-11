@@ -15,8 +15,8 @@ def get_tdl():
     return get_tdl_controller()
 
 @tdl.get("/tdl/get_single")
-def getsingle_tdl(thesingle):
-    return getsingle_tdl_controller(thesingle)
+def getsingle_tdl(the_single):
+    return getsingle_tdl_controller(the_single)
 
 @tdl.post("/tdl")
 def post_tdl(item: Item):
