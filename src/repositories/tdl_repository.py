@@ -16,10 +16,10 @@ def get_tdl_from_json():
     with open("data/tdl.json", "r") as file:
         return json.load(file)
 
-def get_single_tdl_from_json(the_single):
+def get_single_tdl_from_json(title_want_to_get):
     with open("data/tdl.json", "r") as file:
         dict_t=json.load(file)
-        return dict_t[the_single]
+        return dict_t[title_want_to_get]
 
 def write_tdl_into_json(item: Item):
     with open("data/tdl.json", "r") as file:
@@ -31,10 +31,10 @@ def write_tdl_into_json(item: Item):
     with open("data/tdl.json", "w") as file:
         file.write(json_obj)
 
-def delete_tdl_from_json(bye):
+def delete_tdl_from_json(title_want_to_delete):
     with open("data/tdl.json", "r") as file:
         dict_t = json.load(file)
-    del dict_t[bye]
+    del dict_t[title_want_to_delete]
     json_obj = json.dumps(dict_t)
     with open("data/tdl.json", "w") as file:
         file.write(json_obj)

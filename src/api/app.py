@@ -3,7 +3,8 @@ from fastapi import APIRouter
 
 from src.controllers.get_tdl import get_tdl_controller
 from src.controllers.get_single_tdl import get_single_tdl_controller
-from src.controllers.post_tdl import post_tdl_controller, Item
+from src.controllers.post_tdl import post_tdl_controller
+from src.controllers.post_tdl import Item
 from src.controllers.delete_tdl import delete_tdl_controller
 
 tdl = APIRouter(tags=["tdl"])
@@ -15,8 +16,8 @@ def get_tdl():
     return get_tdl_controller()
 
 @tdl.get("/tdl/get_single")
-def get_single_tdl(the_single):
-    return get_single_tdl_controller(the_single)
+def get_single_tdl(title_want_to_get):
+    return get_single_tdl_controller(title_want_to_get)
 
 @tdl.post("/tdl")
 def post_tdl(item: Item):
@@ -25,7 +26,7 @@ def post_tdl(item: Item):
 
 
 @tdl.delete("/tdl/delete_single")
-def delete_tdl(bye):
-    return delete_tdl_controller(bye)
+def delete_tdl(title_want_to_delete):
+    return delete_tdl_controller(title_want_to_delete)
 
 
